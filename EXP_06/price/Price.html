@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Pricing Plans</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Our AI-Pricing Plans</h1>
+        
+        <div class="toggle-container">
+            <span class="toggle-label active">Monthly</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="pricing-toggle">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label">Annual</span>
+        </div>
+        
+        <div class="plans-container">
+            <!-- Basic Plan -->
+            <div class="plan-card">
+                <h2 class="plan-name">Basic</h2>
+                <div class="price monthly-price">₹599<span>/month</span></div>
+                <div class="price annual-price hidden">₹1299<span>/year</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> 1 User</li>
+                    <li><i class="fas fa-check"></i> 5 Projects</li>
+                    <li><i class="fas fa-check"></i> Email Support</li>
+                </ul>
+                <button class="choose-plan-btn">Choose Plan</button>
+            </div>
+            
+            <!-- Standard Plan -->
+            <div class="plan-card featured">
+                <div class="popular-badge">Most Popular</div>
+                <h2 class="plan-name">Standard</h2>
+                <div class="price monthly-price">₹2999<span>/month</span></div>
+                <div class="price annual-price hidden">₹5999<span>/year</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> 5 Users</li>
+                    <li><i class="fas fa-check"></i> 50 Projects</li>
+                    <li><i class="fas fa-check"></i> Priority Email Support</li>
+                    <li><i class="fas fa-check"></i> Analytics Dashboard</li>
+                </ul>
+                <button class="choose-plan-btn featured-btn">Choose Plan</button>
+            </div>
+            
+            <!-- Premium Plan -->
+            <div class="plan-card">
+                <h2 class="plan-name">Premium</h2>
+                <div class="price monthly-price">₹3499<span>/month</span></div>
+                <div class="price annual-price hidden">₹8999<span>/year</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Unlimited Users</li>
+                    <li><i class="fas fa-check"></i> Unlimited Projects</li>
+                    <li><i class="fas fa-check"></i> 24/7 Support</li>
+                    <li><i class="fas fa-check"></i> Advanced Analytics</li>
+                    <li><i class="fas fa-check"></i> Dedicated Manager</li>
+                </ul>
+                <button class="choose-plan-btn">Choose Plan</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
