@@ -1,0 +1,30 @@
+<!-- Q9. JavaScript program to prompt for student name and branch and show result in a dialog box (Different style & design) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information</title>
+</head>
+<body style="background-color: #010f17; font-family: Georgia, 'Times New Roman', Times, serif;">
+
+    <h2 style="color: rgb(155, 179, 4);">Student Information Form</h2>
+
+    <script>
+        // Asking user details
+        let name = window.prompt("Please enter your Name:");
+        let branch = window.prompt("Please enter your Branch:");
+
+        // Creating message
+        let info = "Welcome " + name + "!\nYou are from " + branch + " branch.";
+        let info1 = branch + " in C. V. Raman Global University";
+
+        // Showing result in a dialog
+        window.alert(info);
+
+        // Also printing on page for better design
+        document.write("<p style='color: Darkgreen; font-size:18px;'><b>" + info + "</b></p>");
+        document.write("<p style='color: Darkgreen; font-size:18px;'><b>" + info1 + "</b></p>");
+    </script>
+
+</body>
+</html>
