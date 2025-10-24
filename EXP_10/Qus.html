@@ -1,0 +1,39 @@
+<!-- Q10. JavaScript examples of String, Math, Array, Boolean, and Date objects (Different style & design) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects in JavaScript</title>
+</head>
+<body style="background-color: #fffaf0; font-family: Verdana;">
+
+    <h2 style="color: maroon;">Examples of Built-in JavaScript Objects</h2>
+
+    <div style="border:2px solid brown; padding:10px; width:60%; background:#f9f9f9;">
+        <script>
+            // STRING OBJECT
+            let myString = new String("JavaScript is fun!");
+            document.write("<p><b>String:</b> Length of string = " + myString.length + "</p>");
+
+            // MATH OBJECT
+            let number = 25;
+            document.write("<p><b>Math:</b> Square root of " + number + " = " + Math.sqrt(number) + "</p>");
+
+            // ARRAY OBJECT
+            let fruits = ["Orange", "Apple", "Grapes", "Mango"];
+            fruits.sort();  // just to make it look different
+            document.write("<p><b>Array:</b> Fruits list = " + fruits + "</p>");
+
+            // BOOLEAN OBJECT
+            let x = 5, y = 10;
+            let check = new Boolean(x < y);
+            document.write("<p><b>Boolean:</b> Is 5 less than 10? " + check + "</p>");
+
+            // DATE OBJECT
+            let today = new Date();
+            document.write("<p><b>Date:</b> Current Date and Time: " + today.toLocaleString() + "</p>");
+        </script>
+    </div>
+
+</body>
+</html>
