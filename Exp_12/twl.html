@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register Page</title>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+body {
+  display: flex;
+  height: 100vh;
+}
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+form {
+  width: 320px;
+}
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+p {
+  margin-bottom: 20px;
+  color: #444;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #007bff;
+}
+a:hover {
+  text-decoration: underline;
+}
+button {
+  background: #007bff;
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  background: #0056b3;
+}
+.create {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.create a {
+  color: #007bff;
+}
+.right {
+  flex: 0.7;
+  background: #007bff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.right button {
+  width: 240px;
+  background: white;
+  color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.right button:hover {
+  background: #f0f0f0;
+}
+</style>
+</head>
+<body>
+<div class="left">
+<form onsubmit="return validateForm()">
+<h1>Create Account 👋</h1>
+<p>Register your new account</p>
+<input type="text" id="email" placeholder="Email ID">
+<input type="password" id="pass" placeholder="Password">
+<input type="password" id="repass" placeholder="Retype Password">
+<a href="#">I forgot my password</a>
+<button type="submit">Register</button>
+<div class="create">Already have an account? <a href="#">Log in</a></div>
+</form>
+</div>
+<div class="right">
+<button>🔵 Log in with Facebook</button>
+<button>🟠 Sign in with Google</button>
+<button>⚫ Log in with GitHub</button>
+<button>🔷 Sign in with Twitter</button>
+<button>🟣 Log in with Discord</button>
+<button>⚪ Sign in with Apple</button>
+<button>👤 Login with a passkey</button>
+</div>
+<script>
+function validateForm(){
+  var email=document.getElementById("email").value;
+  var pass=document.getElementById("pass").value;
+  var repass=document.getElementById("repass").value;
+  var emailPattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if(!email.match(emailPattern)){alert("Invalid Email ID");return false;}
+  if(pass.length<6){alert("Password must be at least 6 characters long");return false;}
+  if(pass!==repass){alert("Passwords do not match");return false;}
+  alert("Registration Successful!");
+  return true;
+}
+</script>
+</body>
+</html>
+
