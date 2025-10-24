@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Color Changer</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff7eb3, #65d6ce);
+  transition: background 1s ease;
+}
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 50px 80px;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+}
+h1 {
+  font-size: 40px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+button {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
+}
+.color-name {
+  margin-top: 25px;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Dynamic Color Changer 🎨</h1>
+<button onclick="changeColor()">Change Background</button>
+<div class="color-name" id="colorName">Current: Default</div>
+</div>
+<script>
+var colors = [
+  "#ff7eb3", "#ff758c", "#6a82fb", "#fc5c7d", "#43cea2", 
+  "#30cfd0", "#8360c3", "#02aab0", "#fdbb2d", "#a1ffce", 
+  "#00c9ff", "#92fe9d", "#f7797d", "#4facfe", "#e1eec3"
+];
+function changeColor() {
+  var randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.background = randomColor;
+  document.getElementById("colorName").innerText = "Current: " + randomColor;
+}
+</script>
+</body>
+</html>
