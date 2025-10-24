@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="sunny">
+    <div class="container">
+        <header>
+            <h1 class="app-title">Weather Dashboard</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search location...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <main class="weather-dashboard">
+            <section class="current-weather">
+                <h2 class="location">Odisha, India</h2>
+                <p class="date">Friday, September 12, 2025</p>
+                <div class="weather-main">
+                    <div class="temperature">28°C</div>
+                    <div class="weather-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </div>
+                <div class="weather-condition">Sunny</div>
+                
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <i class="fas fa-tint"></i>
+                        <span>Humidity</span>
+                        <span class="value">50%</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-wind"></i>
+                        <span>Wind Speed</span>
+                        <span class="value">12 km/h</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-sun"></i>
+                        <span>UV Index</span>
+                        <span class="value">6</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-compress-alt"></i>
+                        <span>Pressure</span>
+                        <span class="value">1013 hPa</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="forecast">
+                <h2 class="forecast-title">5-Day Forecast</h2>
+                <div class="forecast-container">
+                    <div class="forecast-day">
+                        <div class="forecast-date">Tue</div>
+                        <div class="forecast-icon"><i class="fas fa-cloud-sun"></i></div>
+                        <div class="forecast-temp">26°C</div>
+                    </div>
+                    <div class="forecast-day">
+                        <div class="forecast-date">Wed</div>
+                        <div class="forecast-icon"><i class="fas fa-cloud"></i></div>
+                        <div class="forecast-temp">24°C</div>
+                    </div>
+                    <div class="forecast-day">
+                        <div class="forecast-date">Thu</div>
+                        <div class="forecast-icon"><i class="fas fa-cloud-rain"></i></div>
+                        <div class="forecast-temp">27°C</div>
+                    </div>
+                    <div class="forecast-day">
+                        <div class="forecast-date">Fri</div>
+                        <div class="forecast-icon"><i class="fas fa-sun"></i></div>
+                        <div class="forecast-temp">29°C</div>
+                    </div>
+                    <div class="forecast-day">
+                        <div class="forecast-date">Sat</div>
+                        <div class="forecast-icon"><i class="fas fa-sun"></i></div>
+                        <div class="forecast-temp">30°C</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Weather Dashboard &copy; 2025 - Data refreshed every 15 minutes</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
