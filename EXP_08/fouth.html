@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort an Array</title>
+</head>
+<body style="font-family: Arial; background-color: #e8f4f8; text-align: center; margin-top: 50px;">
+    <h2 style="color: darkblue;">JavaScript Program to Sort an Array</h2>
+
+    <script>
+        // Original array
+     numbers = [45, 12, 8, 32, 19, 27];
+
+        document.write("<b>Original Array:</b> " + numbers + "<br><br>");
+
+        // Sort in ascending order
+        let ascending = numbers.slice().sort(function(a, b) {
+            return a - b;
+        });
+
+        document.write("<b>Sorted in Ascending Order:</b> " + ascending + "<br><br>");
+
+        // Sort in descending order
+        let descending = numbers.slice().sort(function(a, b) {
+            return b - a;
+        });
+
+        document.write("<b>Sorted in Descending Order:</b> " + descending);
+    </script>
+
+</body>
+</html>

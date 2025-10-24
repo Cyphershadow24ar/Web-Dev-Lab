@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matrix Operations</title>
+</head>
+<body style="font-family: Arial; background-color: #f0f8ff; text-align: center; margin-top: 50px;">
+    <h2 style="color: darkblue;">JavaScript Program for Matrix Operations</h2>
+    <script>
+        // Defining a 2D array (Matrix)
+        let matrix = [
+            [3, 5, 7],
+            [2, 9, 4],
+            [6, 8, 1]
+        ];
+
+        document.write("<b>Matrix:</b><br>");
+        for (let i = 0; i < matrix.length; i++) {
+            document.write(matrix[i].join(" ") + "<br>");
+        }
+
+        // Initialize sum, min, and max
+        let sum = 0;
+        let min = matrix[0][0];
+        let max = matrix[0][0];
+
+        // Loop through all elements
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                let val = matrix[i][j];
+                sum += val;
+                if (val < min) min = val;
+                if (val > max) max = val;
+            }
+        }
+
+        // Display results
+        document.write("<br><b>Sum of elements:</b> " + sum + "<br>");
+        document.write("<b>Minimum element:</b> " + min + "<br>");
+        document.write("<b>Maximum element:</b> " + max + "<br>");
+    </script>
+
+</body>
+</html>
